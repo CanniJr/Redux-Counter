@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import {increment, decrement, reset, login, logout, addByFive, subtractByFive} from './actions'
+import {increment, decrement, reset, login, logout} from './actions'
 
 function App() {
   const counter = useSelector(state => state.counter)
@@ -22,9 +22,9 @@ function App() {
       <button
         onClick={() => dispatch(reset())}>Reset</button>
       <button
-        onClick={() => dispatch(addByFive())}>+ 5</button>
+        onClick={() => dispatch(increment(5))}>+ 5</button>
       <button
-        onClick={() => dispatch(subtractByFive())}>- 5</button>
+        onClick={() => dispatch(decrement(5))}>- 5</button>
 
       <button
         onClick={() => dispatch(login())}>Log in</button>

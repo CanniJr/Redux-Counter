@@ -1,31 +1,20 @@
-export const increment = () => {
+export const increment = (input = 1) => {
     return {
-        type: 'INCREMENT'
-
+        type: 'INCREMENT',
+        payload: input
     }
 }
 
-export const decrement = () => {
+export const decrement = (input = 1) => {
     return {
-        type: 'DECREMENT'
+        type: 'DECREMENT',
+        payload: input
     }
 }
 
 export const reset = () => {
     return {
         type: 'RESET'
-    }
-}
-
-export const addByFive = () => {
-    return {
-        type: 'ADD_5'
-    }
-}
-
-export const subtractByFive = () => {
-    return {
-        type: 'SUBTRACT_5'
     }
 }
 
