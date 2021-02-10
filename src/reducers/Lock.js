@@ -1,6 +1,6 @@
 const lockReducer = (state = true, action) => {
     switch (action.type) {
-        case 'UNLOCK':
+        case 'LOCK/UNLOCK':
             return !state
         default:
             return state
